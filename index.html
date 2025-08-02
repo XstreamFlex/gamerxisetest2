@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerXise - Gaming Fitness Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0A192F;
+            --primary-green: #64FFDA;
+            --secondary-blue: #172A45;
+            --accent-green: #4BFFDA;
+            --text-light: #E6F4F7;
+            --text-dark: #0D0D0D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-green);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--text-light);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 26, 47, 0.9);
+            padding: 1rem;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial {
+            background: var(--text-light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+
+        .pricing-card {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            color: var(--primary-green);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Gaming Sessions into Fitness Sessions</h1>
+            <p>Stay healthy while doing what you love</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="grid">
+            <div class="card">
+                <h2>Why Choose Us?</h2>
+                <p>Founded by gamers, for gamers. We understand the health challenges of long gaming sessions and have created the perfect solution.</p>
+            </div>
+            <div class="card">
+                <h2>Our Mission</h2>
+                <p>To help gamers maintain their physical health while enjoying their passion for gaming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="grid">
+            <div class="card">
+                <h3>Monthly Subscriptions</h3>
+                <p>Guided workout programs synced with your gaming sessions.</p>
+            </div>
+            <div class="card">
+                <h3>Personal Training</h3>
+                <p>Customized fitness plans tailored to your gaming lifestyle.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Programming</h3>
+                <p>Personalized exercise routines for optimal health benefits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <div class="grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p>$29/mo</p>
+                <ul>
+                    <li>Basic workout plans</li>
+                    <li>Access to community</li>
+                </ul>
+                <button class="btn btn-primary">Choose Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Pro</h3>
+                <p>$79/mo</p>
+                <ul>
+                    <li>Advanced workout plans</li>
+                    <li>Personalized coaching</li>
+                    <li>Premium support</li>
+                </ul>
+                <button class="btn btn-primary">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="contact-form">
+            <h2>Get Started Today</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-input" placeholder="Message" rows="4"></textarea>
+                </div>
+                <button class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="section">
+        <div class="grid">
+            <div class="card">
+                <h3>About Us</h3>
+                <p>GamerXise is dedicated to helping gamers maintain their physical health through innovative fitness programs.</p>
+            </div>
+            <div class="card">
+                <h3>Connect With Us</h3>
+                <p>Join our community and stay updated on the latest fitness programs.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(10, 26, 47, 0.95)';
+            } else {
+                nav.style.background = 'rgba(10, 26, 47, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
